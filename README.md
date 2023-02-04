@@ -16,3 +16,8 @@ To install this extension:
 This project is configured to launch Visual Studio when debugging.  In that
 instance, I have been assigning the current command to the `Ctrl+Num 0` keyboard
 shortcut.
+
+If you notice that changes are not showing up when debugging this extension,
+try resetting the experimental instance.  To do this, run the following shortcut:
+
+Start menu > Visual Studio 2022 > Reset the Visual Studio 2022 Experimental Instance LTSC 17.2
