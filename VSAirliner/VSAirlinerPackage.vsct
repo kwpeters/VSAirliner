@@ -15,10 +15,10 @@
         defining some of the constants that we will use inside the file. -->
 
   <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
-  <Extern href="stdidcmd.h"/>
+  <Extern href="stdidcmd.h" />
 
   <!--This header contains the command ids for the menus provided by the shell. -->
-  <Extern href="vsshlids.h"/>
+  <Extern href="vsshlids.h" />
 
   <!--The Commands section is where commands, menus, and menu groups are defined.
       This section uses a Guid to identify the package that provides the command defined inside it. -->
@@ -37,7 +37,7 @@
          must be a menu. -->
     <Groups>
       <Group guid="guidVSAirlinerPackageCmdSet" id="MyMenuGroup" priority="0x0600">
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />
       </Group>
     </Groups>
 
@@ -59,6 +59,27 @@
           <ButtonText>Invoke Xyzzy</ButtonText>
         </Strings>
       </Button>
+      <Button guid="guidVSAirlinerPackageCmdSet" id="cmdidVSAirlinerHungryBackspace" priority="0x0100" type="Button">
+        <Parent guid="guidVSAirlinerPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages1" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Invoke VSAirlinerHungryBackspace</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSAirlinerPackageCmdSet" id="cmdidVSAirlinerCutToEol" priority="0x0100" type="Button">
+        <Parent guid="guidVSAirlinerPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages2" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Invoke VSAirlinerCutToEol</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSAirlinerPackageCmdSet" id="cmdidVSAirlinerAppendSemicolon" priority="0x0100" type="Button">
+        <Parent guid="guidVSAirlinerPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages3" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Invoke VSAirlinerAppendSemicolon</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
@@ -68,7 +89,10 @@
             bitmap strip containing the bitmaps and then there are the numeric ids of the elements used
             inside a button definition. An important aspect of this declaration is that the element id
             must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
-      <Bitmap guid="guidImages" href="Resources\Xyzzy.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough"/>
+      <Bitmap guid="guidImages" href="Resources\Xyzzy.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+      <Bitmap guid="guidImages1" href="Resources\VSAirlinerHungryBackspace.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+      <Bitmap guid="guidImages2" href="Resources\VSAirlinerCutToEol.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+      <Bitmap guid="guidImages3" href="Resources\VSAirlinerAppendSemicolon.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
     </Bitmaps>
   </Commands>
 
@@ -80,9 +104,39 @@
     <GuidSymbol name="guidVSAirlinerPackageCmdSet" value="{5b360608-e092-40e3-8e5c-a0eb27e2c8c9}">
       <IDSymbol name="MyMenuGroup" value="0x1020" />
       <IDSymbol name="XyzzyId" value="0x0100" />
+      <IDSymbol value="4129" name="cmdidVSAirlinerHungryBackspace" />
+      <IDSymbol value="4130" name="cmdidVSAirlinerCutToEol" />
+      <IDSymbol value="4131" name="cmdidVSAirlinerAppendSemicolon" />
     </GuidSymbol>
 
-    <GuidSymbol name="guidImages" value="{172cc23f-e9b0-4b1c-b55e-aa487dc194c3}" >
+    <GuidSymbol name="guidImages" value="{172cc23f-e9b0-4b1c-b55e-aa487dc194c3}">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{e2aafce7-e8c9-42fe-9d48-9a9839862783}" name="guidImages1">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{b9b4b836-3c93-4c7f-83b0-4060dd172907}" name="guidImages2">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{8eb66d24-fb4a-4205-8314-4c6aaeb21a5a}" name="guidImages3">
       <IDSymbol name="bmpPic1" value="1" />
       <IDSymbol name="bmpPic2" value="2" />
       <IDSymbol name="bmpPicSearch" value="3" />
