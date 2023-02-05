@@ -51,6 +51,7 @@ namespace VSAirliner
             await VSAirlinerHungryBackspace.InitializeAsync(this);
             await VSAirlinerCutToEol.InitializeAsync(this);
             await VSAirlinerAppendSemicolon.InitializeAsync(this);
+            await VSAirlinerSplitDown.InitializeAsync(this);
         }
 
         #endregion

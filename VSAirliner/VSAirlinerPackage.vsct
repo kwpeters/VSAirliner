@@ -80,6 +80,13 @@
           <ButtonText>Invoke VSAirlinerAppendSemicolon</ButtonText>
         </Strings>
       </Button>
+      <Button guid="guidVSAirlinerPackageCmdSet" id="cmdidVSAirlinerSplitDown" priority="0x0100" type="Button">
+        <Parent guid="guidVSAirlinerPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages4" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Invoke VSAirlinerSplitDown</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
@@ -93,6 +100,7 @@
       <Bitmap guid="guidImages1" href="Resources\VSAirlinerHungryBackspace.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
       <Bitmap guid="guidImages2" href="Resources\VSAirlinerCutToEol.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
       <Bitmap guid="guidImages3" href="Resources\VSAirlinerAppendSemicolon.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+      <Bitmap guid="guidImages4" href="Resources\VSAirlinerSplitDown.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
     </Bitmaps>
   </Commands>
 
@@ -107,6 +115,7 @@
       <IDSymbol value="4129" name="cmdidVSAirlinerHungryBackspace" />
       <IDSymbol value="4130" name="cmdidVSAirlinerCutToEol" />
       <IDSymbol value="4131" name="cmdidVSAirlinerAppendSemicolon" />
+      <IDSymbol value="4132" name="cmdidVSAirlinerSplitDown" />
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{172cc23f-e9b0-4b1c-b55e-aa487dc194c3}">
@@ -137,6 +146,15 @@
     </GuidSymbol>
   
     <GuidSymbol value="{8eb66d24-fb4a-4205-8314-4c6aaeb21a5a}" name="guidImages3">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{beef5bed-66b4-482a-ac7e-419771e48751}" name="guidImages4">
       <IDSymbol name="bmpPic1" value="1" />
       <IDSymbol name="bmpPic2" value="2" />
       <IDSymbol name="bmpPicSearch" value="3" />

@@ -52,6 +52,7 @@
     <Compile Include="VSAirlinerCutToEol.cs" />
     <Compile Include="VSAirlinerHungryBackspace.cs" />
     <Compile Include="VSAirlinerPackage.cs" />
+    <Compile Include="VSAirlinerSplitDown.cs" />
     <Compile Include="Xyzzy.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +82,7 @@
     <Content Include="Resources\VSAirlinerAppendSemicolon.png" />
     <Content Include="Resources\VSAirlinerCutToEol.png" />
     <Content Include="Resources\VSAirlinerHungryBackspace.png" />
+    <Content Include="Resources\VSAirlinerSplitDown.png" />
     <Content Include="Resources\Xyzzy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
