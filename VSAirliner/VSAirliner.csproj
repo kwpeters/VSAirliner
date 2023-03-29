@@ -53,6 +53,7 @@
     <Compile Include="VSAirlinerHungryBackspace.cs" />
     <Compile Include="VSAirlinerPackage.cs" />
     <Compile Include="VSAirlinerSplitDown.cs" />
+    <Compile Include="VSAirlinerSplitRight.cs" />
     <Compile Include="Xyzzy.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +84,7 @@
     <Content Include="Resources\VSAirlinerCutToEol.png" />
     <Content Include="Resources\VSAirlinerHungryBackspace.png" />
     <Content Include="Resources\VSAirlinerSplitDown.png" />
+    <Content Include="Resources\VSAirlinerSplitRight.png" />
     <Content Include="Resources\Xyzzy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
