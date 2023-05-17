@@ -11,19 +11,20 @@ To install this extension:
 3. Close all instances of Visual Studio.
 4. Run the installer: `VSAirliner\bin\Release\VSAirliner.vsix`
 
-## Debugging
-
-This project is configured to launch Visual Studio when debugging.  In that
-instance, I have been assigning the current command to the `Ctrl+Num 0` keyboard
-shortcut.
-
-If you notice that changes are not showing up when debugging this extension,
-try resetting the experimental instance.  To do this, run the following shortcut:
-
-Start menu > Visual Studio 2022 > Reset the Visual Studio 2022 Experimental Instance LTSC 17.2
-
 ## Adding a New Command
 
 - In the Solution Explorer, right click on the project and choose Add > New Item...
 - In the Search box, search for "Command"
 - Choose the "Command" C# Item and give it a name starting with "VSAirliner..."
+
+## Debugging
+
+This project is configured to launch Visual Studio when debugging.
+
+Debugging a new version only seems to work if the extension is not currently
+installed.
+
+If you notice that changes are not showing up when debugging this extension,
+try resetting the experimental instance.  To do this, run the following shortcut:
+
+Start menu > Visual Studio 2022 > Reset the Visual Studio 2022 Experimental Instance LTSC 17.2
